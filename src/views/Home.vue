@@ -1,9 +1,11 @@
 <template>
   <v-container :fluid="true" ref="wrapper">
     <carousel-component />
-    <bestseller-component />
-    <product-component />
-    <h1 class="mt-5">Halo world</h1>
+    <v-row style="position: fixed; bottom: 0; right: 40px; z-index: 2">
+      <v-alert type="success" v-show="feedbackMessage">Add products to shopping carts</v-alert>
+    </v-row>
+    <bestseller-component @feedbackShoppingCart="feedback" />
+    <product-component @feedbackShoppingCart="feedback" />
   </v-container>
 </template>
 
@@ -14,23 +16,25 @@ import { mdiAccount, mdiAccountAlert } from "@mdi/js";
 import Carousel from "../components/product/CarouselComponent.vue";
 import BestSeller from "../components/product/BestSellerComponent.vue";
 import Product from "../components/product/ProductComponent.vue";
+// import Vue from "vue";
 export default {
   name: "Home",
   components: {
     "carousel-component": Carousel,
     "bestseller-component": BestSeller,
-    "product-component": Product,
+    "product-component": Product
   },
   data() {
     return {
       icons: [
         {
-          icon: mdiAccount,
+          icon: mdiAccount
         },
         {
-          icon: mdiAccountAlert,
-        },
+          icon: mdiAccountAlert
+        }
       ],
+      feedbackMessage: false
     };
   },
   mounted() {
@@ -43,6 +47,13 @@ export default {
     getProducts() {
       this.$store.dispatch("product/getProducts");
     },
-  },
+    feedback() {
+      this.feedbackMessage = true;
+      let self = this;
+      setTimeout(function() {
+        self.feedbackMessage = false;
+      }, 3000);
+    }
+  }
 };
 </script>

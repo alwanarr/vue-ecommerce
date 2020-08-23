@@ -70,6 +70,8 @@ export default {
   methods: {
     redirectTo(type, data) {
       if (type == "cart") {
+        this.$emit("feedbackShoppingCart", true);
+
         this.$store.dispatch("product/addToCart", data);
       } else if (type == "card") {
         this.$router.push({ name: "product.detail", params: { id: data } });

@@ -102,6 +102,9 @@ export default {
   methods: {
     redirectTo(type, data) {
       if (type == "cart") {
+        //send into parent component
+        this.$emit("feedbackShoppingCart", true);
+
         this.$store.dispatch("product/addToCart", data);
       } else if (type == "card") {
         this.$router.push({ name: "product.detail", params: { id: data } });

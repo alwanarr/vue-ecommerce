@@ -48,6 +48,12 @@ import Vuetify, {
 
   //VDialog
   VDialog,
+
+  //badges
+  VBadge,
+
+  //alert
+  VAlert,
 } from "vuetify/lib";
 Vue.use(Vuetify, {
   components: {
@@ -96,6 +102,8 @@ Vue.use(Vuetify, {
     VSpeedDial,
 
     VDialog,
+    VBadge,
+    VAlert,
   },
 });
 

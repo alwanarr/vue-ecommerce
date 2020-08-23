@@ -9,13 +9,15 @@
       <v-spacer></v-spacer>
       <v-dialog v-model="dialog" persistent max-width="890">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn icon dark :elevation="0" v-bind="attrs" v-on="on" style="position: relative">
-            <v-icon>{{ cart }}</v-icon>
-            <span
+          <v-badge color="green" :content="getCartCount" inline :value="getCartCount != 0">
+            <v-btn icon dark :elevation="0" v-bind="attrs" v-on="on" style="position: relative">
+              <v-icon>{{ cart }}</v-icon>
+              <!-- <span
               style="position: absolute; top: -3px; right: -3px; width: 20px"
               class="teal rounded-xl"
-            >{{getCartCount}}</span>
-          </v-btn>
+              >{{getCartCount}}</span>-->
+            </v-btn>
+          </v-badge>
         </template>
         <v-card>
           <v-card-title class="headline">Shopping Cart</v-card-title>
