@@ -1,18 +1,39 @@
 {
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
   "products": [
     {
       "id": 0,
       "name": "sepatu keren anak muda",
       "slug": "sepatu-keren-anak-muda",
-      "rating": 4,
       "price": 100000,
+      "rating": 4,
       "weight": 2.2,
       "description": "lorem",
-      "productPhoto": ["sepatu1", "sepatu2"],
-      "category": ["sepatu"],
+      "productPhoto": [
+        "sepatu1",
+        "sepatu2"
+      ],
+      "category": [
+        "sepatu"
+      ],
       "bestSeller": true
     },
-
     {
       "id": 1,
       "name": "kaos polos",
@@ -21,32 +42,45 @@
       "rating": 4,
       "weight": 1,
       "description": "lorem",
-      "productPhoto": ["kaos1", "kaos1"],
-      "category": ["kaos pria"],
+      "productPhoto": [
+        "kaos1",
+        "kaos1"
+      ],
+      "category": [
+        "kaos pria"
+      ],
       "bestSeller": true
     },
     {
       "id": 2,
       "name": "kaos keren",
       "slug": "kaos-keren",
-      "rating": 4,
       "price": 80000,
+      "rating": 4,
       "weight": 1,
       "description": "lorem ipsum",
-      "productPhoto": ["kaos3"],
-      "category": ["kaos pria"],
+      "productPhoto": [
+        "kaos3"
+      ],
+      "category": [
+        "kaos pria"
+      ],
       "bestSeller": true
     },
     {
       "id": 3,
       "name": "Celana Panjang",
       "slug": "celana-panjang",
-      "rating": 4.5,
       "price": 120000,
       "weight": 1,
+      "rating": 4,
       "description": "lorem ipsum dorem",
-      "productPhoto": ["celana"],
-      "category": ["celana"],
+      "productPhoto": [
+        "celana"
+      ],
+      "category": [
+        "celana"
+      ],
       "bestSeller": true
     },
     {
@@ -54,11 +88,15 @@
       "name": "Celana pendek",
       "slug": "celana-pendek",
       "price": 50000,
-      "rating": 5,
+      "rating": 4,
       "weight": 1,
       "description": "lorem ipsum dorem",
-      "productPhoto": ["celanaPendek"],
-      "category": ["celana"],
+      "productPhoto": [
+        "celanaPendek"
+      ],
+      "category": [
+        "celana"
+      ],
       "bestSeller": true
     },
     {
@@ -69,65 +107,83 @@
       "rating": 4,
       "weight": 1,
       "description": "lorem ipsum dorem",
-      "productPhoto": ["celanaPendek"],
-      "category": ["celana"],
+      "productPhoto": [
+        "celanaPendek"
+      ],
+      "category": [
+        "celana"
+      ],
       "bestSeller": true
     },
     {
       "id": 6,
       "name": "Dress",
-      "rating": 3,
       "slug": "dress",
       "price": 150000,
       "weight": 1,
       "description": "lorem ipsum dorem",
-      "productPhoto": ["dress"],
-      "category": ["dress"]
+      "productPhoto": [
+        "dress"
+      ],
+      "category": [
+        "dress"
+      ]
     },
     {
       "id": 7,
       "name": "jaket",
       "slug": "jeket-keren",
       "price": 200000,
-      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
-      "productPhoto": ["jaket"],
-      "category": ["jaket"]
+      "productPhoto": [
+        "jaket"
+      ],
+      "category": [
+        "jaket"
+      ]
     },
-
     {
       "id": 8,
       "name": "jaket",
       "slug": "jeket-keren",
       "price": 200000,
-      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
-      "productPhoto": ["jaket"],
-      "category": ["jaket"]
+      "productPhoto": [
+        "jaket"
+      ],
+      "category": [
+        "jaket"
+      ]
     },
     {
       "id": 9,
       "name": "jaket",
       "slug": "jeket-keren",
       "price": 200000,
-      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
-      "productPhoto": ["jaket"],
-      "category": ["jaket"]
+      "productPhoto": [
+        "jaket"
+      ],
+      "category": [
+        "jaket"
+      ]
     },
     {
       "id": 10,
       "name": "kemeja",
       "slug": "kemeja-kotak",
       "price": 2000000,
-      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
-      "productPhoto": ["kemeja"],
-      "category": ["kemeja"]
+      "productPhoto": [
+        "kemeja"
+      ],
+      "category": [
+        "kemeja"
+      ]
     }
   ]
 }
