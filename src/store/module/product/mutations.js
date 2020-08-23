@@ -27,6 +27,7 @@ const ADD_TO_CART = (state, payload) => {
     Vue.set(payload, "totalPrice", payload.price);
     state.cartCount = state.cart.length;
   }
+  SAVE_CART(state);
 };
 
 const REMOVE_CART = (state, payload) => {
@@ -35,5 +36,10 @@ const REMOVE_CART = (state, payload) => {
 
   state.cart.splice(index, 1);
   state.cartCount = state.cart.length;
+  SAVE_CART(state);
 };
-export { SET_PRODUCTS, ADD_TO_CART, REMOVE_CART };
+const SAVE_CART = (state) => {
+  window.localStorage.setItem("cart", JSON.stringify(state.cart));
+  window.localStorage.setItem("cartCount", JSON.stringify(state.cartCount));
+};
+export { SET_PRODUCTS, ADD_TO_CART, REMOVE_CART, SAVE_CART };

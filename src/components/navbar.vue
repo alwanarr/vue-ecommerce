@@ -12,16 +12,14 @@
           <v-badge color="green" :content="getCartCount" inline :value="getCartCount != 0">
             <v-btn icon dark :elevation="0" v-bind="attrs" v-on="on" style="position: relative">
               <v-icon>{{ cart }}</v-icon>
-              <!-- <span
-              style="position: absolute; top: -3px; right: -3px; width: 20px"
-              class="teal rounded-xl"
-              >{{getCartCount}}</span>-->
             </v-btn>
           </v-badge>
         </template>
         <v-card>
           <v-card-title class="headline">Shopping Cart</v-card-title>
-          <v-card-text>
+          <v-card-text
+            :style="$vuetify.breakpoint.mobile ? 'padding: 0 15px 10px': 'padding: 0 24px 20px;'"
+          >
             <template v-for="cart in getCart">
               <v-row align="center" :key="cart.id">
                 <v-col md="3" lg="3" xs="3" sm="3">{{cart.name}}</v-col>
@@ -50,13 +48,15 @@
               </v-row>
             </v-container>
             <v-container v-if="getCart.length == 0">
-              <h1>Lets Shopping</h1>
+              <v-row justify="center">
+                <h1>Let's go shopping</h1>
+              </v-row>
             </v-container>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="green darken-1" text @click="dialog = false">Disagree</v-btn>
-            <v-btn color="green darken-1" text @click="dialog = false">Agree</v-btn>
+            <v-btn outlined text @click="dialog = false">Go To Product Page</v-btn>
+            <v-btn color="pink darken-1" dark @click="dialog = false">Checkout</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
