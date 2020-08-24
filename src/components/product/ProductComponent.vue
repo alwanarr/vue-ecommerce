@@ -3,7 +3,10 @@
     <h1>Featured</h1>
     <v-row>
       <template v-for="product in getProducts">
-        <v-col md="4" lg="4" :key="product.id">
+        <v-col md="4" lg="4" :key="product.id" v-if="loadingSk">
+          <v-skeleton-loader class="mx-auto" max-width="500" type="card" :key="product.name"></v-skeleton-loader>
+        </v-col>
+        <v-col md="4" lg="4" :key="product.id" v-else>
           <v-card outlined hover @click="redirectTo('card', product.slug)">
             <v-img
               src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -64,8 +67,12 @@ export default {
   },
   data() {
     return {
-      shoppingCart: mdiShopping
+      shoppingCart: mdiShopping,
+      loadingSk: false
     };
+  },
+  created() {
+    this.loading();
   },
   methods: {
     redirectTo(type, data) {
@@ -76,6 +83,13 @@ export default {
       } else if (type == "card") {
         this.$router.push({ name: "product.detail", params: { id: data } });
       }
+    },
+    loading() {
+      this.loadingSk = true;
+      let self = this;
+      setTimeout(function() {
+        self.loadingSk = false;
+      }, 4000);
     }
   }
 };

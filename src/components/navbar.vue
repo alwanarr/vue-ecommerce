@@ -55,7 +55,8 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn outlined text @click="dialog = false">Go To Product Page</v-btn>
+
+            <v-btn depressed @click="dialog = false">Go To Product Page</v-btn>
             <v-btn color="pink darken-1" dark @click="dialog = false">Checkout</v-btn>
           </v-card-actions>
         </v-card>

@@ -15,8 +15,11 @@
               :key="product.id"
               v-slot:default="{ active }"
             >
-              <!-- <v-hover v-slot:default="{ hover }"> -->
+              <v-col md="4" lg="4" :key="product.id" v-if="loadingSk">
+                <v-skeleton-loader class="mx-auto" max-width="900" type="card" :key="product.name"></v-skeleton-loader>
+              </v-col>
               <v-card
+                v-else
                 class="ma-4"
                 width="300"
                 hover
@@ -92,12 +95,16 @@ export default {
   },
   data: () => ({
     model: null,
-    shoppingCart: mdiShopping
+    shoppingCart: mdiShopping,
+    loadingSk: false
   }),
   mounted() {
     if (this.$vuetify.breakpoint.mobile) {
       this.$refs.removeContainer.classList.remove("container");
     }
+  },
+  created() {
+    this.loading();
   },
   methods: {
     redirectTo(type, data) {
@@ -109,6 +116,13 @@ export default {
       } else if (type == "card") {
         this.$router.push({ name: "product.detail", params: { id: data } });
       }
+    },
+    loading() {
+      this.loadingSk = true;
+      let self = this;
+      setTimeout(function() {
+        self.loadingSk = false;
+      }, 4000);
     }
   }
 };

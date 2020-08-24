@@ -54,6 +54,9 @@ import Vuetify, {
 
   //alert
   VAlert,
+
+  //skeleton
+  VSkeletonLoader,
 } from "vuetify/lib";
 Vue.use(Vuetify, {
   components: {
@@ -104,6 +107,7 @@ Vue.use(Vuetify, {
     VDialog,
     VBadge,
     VAlert,
+    VSkeletonLoader,
   },
 });
 
