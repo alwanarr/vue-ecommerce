@@ -21,7 +21,9 @@ npm run lint
 ```
 
 ### Run Json Server
+```
 json-server fakeJson/db.json
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
