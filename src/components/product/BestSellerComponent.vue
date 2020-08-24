@@ -120,6 +120,7 @@ export default {
     loading() {
       this.loadingSk = true;
       let self = this;
+      //tunggu sampai 4 detik
       setTimeout(function() {
         self.loadingSk = false;
       }, 4000);
