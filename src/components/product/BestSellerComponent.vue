@@ -1,5 +1,8 @@
 <template>
-  <v-container :fluid="$vuetify.breakpoint.mobile ? true : false" ref="removeContainer">
+  <v-container
+    :fluid="$vuetify.breakpoint.mobile ? true : false"
+    ref="removeContainer"
+  >
     <v-row>
       <v-col md="12" lg="12" sm="12" xs="12">
         <h1 class="d-flex justify-center">Best Seller</h1>
@@ -16,7 +19,12 @@
               v-slot:default="{ active }"
             >
               <v-col md="4" lg="4" :key="product.id" v-if="loadingSk">
-                <v-skeleton-loader class="mx-auto" max-width="900" type="card" :key="product.name"></v-skeleton-loader>
+                <v-skeleton-loader
+                  class="mx-auto"
+                  max-width="900"
+                  type="card"
+                  :key="product.name"
+                ></v-skeleton-loader>
               </v-col>
               <v-card
                 v-else
@@ -26,7 +34,10 @@
                 outlined
                 v-on:click="redirectTo('card', product.slug)"
               >
-                <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
+                <v-img
+                  src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                  height="200px"
+                ></v-img>
 
                 <v-card-title>
                   <h4>{{ product.name }}</h4>
@@ -41,7 +52,7 @@
                     style="margin-top: -80px; "
                     v-on:click.stop="redirectTo('cart', product)"
                   >
-                    <v-icon>{{shoppingCart}}</v-icon>
+                    <v-icon>{{ shoppingCart }}</v-icon>
                   </v-btn>
                 </v-card-title>
 

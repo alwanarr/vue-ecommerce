@@ -5,7 +5,7 @@ Vue.use(Vuex);
 import product from "./module/product/index.js";
 export default new Vuex.Store({
   state: {
-    isLoading: false,
+    isLoading: false
   },
   mutations: {
     LOADING_ROUTER(state, payload) {
@@ -13,10 +13,10 @@ export default new Vuex.Store({
     },
     OFFLOADING_ROUTER(state, payload) {
       state.isLoading = payload;
-    },
+    }
   },
   actions: {},
   modules: {
-    product,
-  },
+    product
+  }
 });

@@ -5,7 +5,7 @@ const state = {
   bestSellers: [],
   product: [],
   cart: cart ? JSON.parse(cart) : [],
-  cartCount: cartCount ? parseInt(cartCount) : 0,
+  cartCount: cartCount ? parseInt(cartCount) : 0
 };
 
 export { state };

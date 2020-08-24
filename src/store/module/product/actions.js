@@ -5,7 +5,7 @@ import axios from "axios";
 //   baseURL: "http://localhost:3000",
 // });
 
-const getProducts = async (context) => {
+const getProducts = async context => {
   try {
     let response = await axios.get("http://localhost:3000/products");
     context.commit("SET_PRODUCTS", response.data);

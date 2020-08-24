@@ -56,7 +56,7 @@ import Vuetify, {
   VAlert,
 
   //skeleton
-  VSkeletonLoader,
+  VSkeletonLoader
 } from "vuetify/lib";
 Vue.use(Vuetify, {
   components: {
@@ -107,14 +107,14 @@ Vue.use(Vuetify, {
     VDialog,
     VBadge,
     VAlert,
-    VSkeletonLoader,
-  },
+    VSkeletonLoader
+  }
 });
 
 const opts = {
   icons: {
-    iconfont: "mdiSvg",
-  },
+    iconfont: "mdiSvg"
+  }
 };
 
 export default new Vuetify(opts);

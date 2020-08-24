@@ -8,13 +8,13 @@ Vue.config.productionTip = false;
 const app = new Vue({
   data() {
     return {
-      loading: false,
+      loading: false
     };
   },
   vuetify,
   router,
   store,
-  render: (h) => h(App),
+  render: h => h(App)
 }).$mount("#app");
 
 router.beforeResolve((to, from, next) => {

@@ -26,11 +26,15 @@
                 size="25"
               ></v-rating>
             </v-card-subtitle>
-            <v-card-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ratione quis, pariatur assumenda officiis eveniet?</v-card-text>
+            <v-card-text
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam ratione quis, pariatur assumenda officiis
+              eveniet?</v-card-text
+            >
             <v-card-actions>
               <v-btn medium dark color="pink darken-1">Beli</v-btn>
               <v-btn medium depressed>
-                <v-icon>{{shoppingIcon}}</v-icon>
+                <v-icon>{{ shoppingIcon }}</v-icon>
               </v-btn>
             </v-card-actions>
           </v-card>

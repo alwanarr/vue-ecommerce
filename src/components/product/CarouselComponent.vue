@@ -32,13 +32,13 @@ export default {
     return {
       items: [
         {
-          src: banner2,
+          src: banner2
         },
         {
-          src: banner,
-        },
-      ],
+          src: banner
+        }
+      ]
     };
-  },
+  }
 };
 </script>

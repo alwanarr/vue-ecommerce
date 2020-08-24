@@ -2,7 +2,9 @@
   <v-container :fluid="true" ref="wrapper">
     <carousel-component />
     <v-row style="position: fixed; bottom: 0; right: 40px; z-index: 10">
-      <v-alert type="success" v-show="feedbackMessage">Add products to shopping carts</v-alert>
+      <v-alert type="success" v-show="feedbackMessage"
+        >Add products to shopping carts</v-alert
+      >
     </v-row>
     <bestseller-component @feedbackShoppingCart="feedback" />
     <product-component @feedbackShoppingCart="feedback" />

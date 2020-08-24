@@ -1,17 +1,17 @@
 //plugin
-const getBestSellers = (state) => {
+const getBestSellers = state => {
   return state.bestSellers;
 };
-const getProducts = (state) => {
+const getProducts = state => {
   return state.product;
 };
-const getAllProducts = (state) => {
+const getAllProducts = state => {
   return state.allProducts;
 };
-const getCart = (state) => {
+const getCart = state => {
   return state.cart;
 };
-const getCartCount = (state) => {
+const getCartCount = state => {
   return state.cartCount;
 };
 export { getBestSellers, getProducts, getAllProducts, getCart, getCartCount };
