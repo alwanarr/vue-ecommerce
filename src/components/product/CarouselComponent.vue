@@ -4,6 +4,7 @@
       <v-col lg="12" md="12" sm="12" xs="12">
         <v-carousel
           hide-delimiters
+          cycle
           class="rounded-xl"
           :height="$vuetify.breakpoint.mobile ? '190' : '500'"
           show-arrows-on-hover

@@ -22,7 +22,8 @@ import Vuetify, {
   VList,
   VListItem,
   VListItemTitle,
-
+  VListItemGroup,
+  VListItemContent,
   //carousel
   VCarousel,
   VCarouselItem,
@@ -56,7 +57,11 @@ import Vuetify, {
   VAlert,
 
   //skeleton
-  VSkeletonLoader
+  VSkeletonLoader,
+
+  //footer
+  VFooter,
+  VDivider,
 } from "vuetify/lib";
 Vue.use(Vuetify, {
   components: {
@@ -87,7 +92,8 @@ Vue.use(Vuetify, {
     VList,
     VListItem,
     VListItemTitle,
-
+    VListItemGroup,
+    VListItemContent,
     //carousel
     VCarousel,
     VCarouselItem,
@@ -107,14 +113,18 @@ Vue.use(Vuetify, {
     VDialog,
     VBadge,
     VAlert,
-    VSkeletonLoader
-  }
+    VSkeletonLoader,
+
+    //footer
+    VFooter,
+    VDivider,
+  },
 });
 
 const opts = {
   icons: {
-    iconfont: "mdiSvg"
-  }
+    iconfont: "mdiSvg",
+  },
 };
 
 export default new Vuetify(opts);

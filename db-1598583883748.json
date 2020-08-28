@@ -85,8 +85,8 @@
     },
     {
       "id": 4,
-      "name": "Celana pendek",
-      "slug": "celana-pendek",
+      "name": "Celana pendek kargo",
+      "slug": "celana-pendek-cargo",
       "price": 50000,
       "rating": 4,
       "weight": 1,
@@ -120,6 +120,7 @@
       "name": "Dress",
       "slug": "dress",
       "price": 150000,
+      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum dorem",
       "productPhoto": [
@@ -127,13 +128,15 @@
       ],
       "category": [
         "dress"
-      ]
+      ],
+      "bestSeller": false
     },
     {
       "id": 7,
       "name": "jaket",
       "slug": "jeket-keren",
       "price": 200000,
+      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
       "productPhoto": [
@@ -141,13 +144,15 @@
       ],
       "category": [
         "jaket"
-      ]
+      ],
+      "bestSeller": false
     },
     {
       "id": 8,
-      "name": "jaket",
-      "slug": "jeket-keren",
+      "name": "jaket gunung",
+      "slug": "jeket-gunung",
       "price": 200000,
+      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
       "productPhoto": [
@@ -155,13 +160,15 @@
       ],
       "category": [
         "jaket"
-      ]
+      ],
+      "bestSeller": false
     },
     {
       "id": 9,
-      "name": "jaket",
-      "slug": "jeket-keren",
+      "name": "hodiee",
+      "slug": "hodiee",
       "price": 200000,
+      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
       "productPhoto": [
@@ -169,13 +176,15 @@
       ],
       "category": [
         "jaket"
-      ]
+      ],
+      "bestSeller": false
     },
     {
       "id": 10,
       "name": "kemeja",
       "slug": "kemeja-kotak",
-      "price": 2000000,
+      "price": 200000,
+      "rating": 3,
       "weight": 1,
       "description": "lorem ipsum",
       "productPhoto": [
@@ -183,7 +192,8 @@
       ],
       "category": [
         "kemeja"
-      ]
+      ],
+      "bestSeller": false
     }
   ]
 }

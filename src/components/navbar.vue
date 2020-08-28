@@ -1,29 +1,16 @@
 <template>
-  <div>
+  <v-container fluid ref="wrapper">
     <v-toolbar color="pink darken-1">
       <v-toolbar-title
         class="white--text ml-4"
         @click="redirectToHome"
         style="cursor: pointer !important;"
-        >Shopikk</v-toolbar-title
-      >
+      >Shopikk</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-dialog v-model="dialog" persistent max-width="890">
         <template v-slot:activator="{ on, attrs }">
-          <v-badge
-            color="green"
-            :content="getCartCount"
-            inline
-            :value="getCartCount != 0"
-          >
-            <v-btn
-              icon
-              dark
-              :elevation="0"
-              v-bind="attrs"
-              v-on="on"
-              style="position: relative"
-            >
+          <v-badge color="green" :content="getCartCount" inline :value="getCartCount != 0">
+            <v-btn icon dark :elevation="0" v-bind="attrs" v-on="on" style="position: relative">
               <v-icon>{{ cart }}</v-icon>
             </v-btn>
           </v-badge>
@@ -44,13 +31,7 @@
                 <v-col md="2" lg="2" xs="2" sm="2">{{ cart.quantity }}</v-col>
                 <v-col md="3" lg="3" xs="3" sm="3">{{ cart.totalPrice }}</v-col>
                 <v-col md="1" lg="1" xs="1" sm="1">
-                  <v-btn
-                    small
-                    depressed
-                    color="error"
-                    fab
-                    @click="remove(cart.id)"
-                  >
+                  <v-btn small depressed color="error" fab @click="remove(cart.id)">
                     <v-icon>{{ deleteIcon }}</v-icon>
                   </v-btn>
                 </v-col>
@@ -80,9 +61,7 @@
             <v-spacer></v-spacer>
 
             <v-btn depressed @click="dialog = false">Go To Product Page</v-btn>
-            <v-btn color="pink darken-1" dark @click="dialog = false"
-              >Checkout</v-btn
-            >
+            <v-btn color="pink darken-1" dark @click="dialog = false">Checkout</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
@@ -103,13 +82,9 @@
       </router-link>-->
     </v-toolbar>
 
-    <loading
-      :active.sync="$root.loading"
-      :can-cancel="true"
-      :is-full-page="fullPage"
-    ></loading>
+    <loading :active.sync="$root.loading" :can-cancel="true" :is-full-page="fullPage"></loading>
     <router-view v-if="$root.loading == false" />
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -172,6 +147,9 @@ export default {
     remove(id) {
       this.$store.dispatch("product/removeCart", id);
     }
+  },
+  mounted() {
+    this.$refs.wrapper.classList.remove("container");
   }
 };
 </script>
