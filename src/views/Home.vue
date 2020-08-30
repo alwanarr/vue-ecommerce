@@ -7,7 +7,7 @@
     <bestseller-component @feedbackShoppingCart="feedback" />
     <product-component @feedbackShoppingCart="feedback" />
     <div></div>
-    <footer-component />
+    <!-- <footer-component /> -->
   </v-container>
 </template>
 
@@ -18,15 +18,15 @@ import { mdiAccount, mdiAccountAlert } from "@mdi/js";
 import Carousel from "../components/product/CarouselComponent.vue";
 import BestSeller from "../components/product/BestSellerComponent.vue";
 import Product from "../components/product/ProductComponent.vue";
-import Footer from "../components/product/FooterComponent.vue";
+// import Footer from "../components/product/FooterComponent.vue";
 // import Vue from "vue";
 export default {
   name: "Home",
   components: {
     "carousel-component": Carousel,
     "bestseller-component": BestSeller,
-    "product-component": Product,
-    "footer-component": Footer
+    "product-component": Product
+    // "footer-component": Footer
   },
   data() {
     return {

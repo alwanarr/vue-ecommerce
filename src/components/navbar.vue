@@ -84,6 +84,7 @@
 
     <loading :active.sync="$root.loading" :can-cancel="true" :is-full-page="fullPage"></loading>
     <router-view v-if="$root.loading == false" />
+    <footer-component />
   </v-container>
 </template>
 
@@ -98,10 +99,12 @@ import {
 import Loading from "vue-loading-overlay";
 import "vue-loading-overlay/dist/vue-loading.css";
 import { mapState, mapGetters } from "vuex";
+import Footer from "../components/product/FooterComponent.vue";
 
 export default {
   components: {
-    Loading
+    Loading,
+    "footer-component": Footer
   },
   computed: {
     ...mapState(["isLoading"]),
